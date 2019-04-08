@@ -1,10 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
-require('./services/passport');
 require('./models/Users');
+require('./services/passport');
 
-const db = require('./config/keys').mongoURI;
+const db = keys.mongoURI;
 mongoose.connect(db, { useNewUrlParser: true });
 
 
