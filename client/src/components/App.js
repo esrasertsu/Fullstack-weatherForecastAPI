@@ -1,5 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+
 import logo from '../logo.svg';
 import '../App.css';
 
@@ -7,8 +10,12 @@ import Header from './Header';
 const Weather = () => <h2>Weather Forecast</h2>
 
 
+class App extends Component {
+  componentMount(){
+    this.props.fetchUser();
+  }
 
-function App() {
+  render(){
   return (
     <div className="App">
     <BrowserRouter>
@@ -22,18 +29,11 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload!Esra
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
         <a href="/auth/google">Sign in Google</a>
       </header>
     </div>
   );
+ }
 }
 
-export default App;
+export default connect(null, actions)(App);
