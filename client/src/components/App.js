@@ -7,11 +7,10 @@ import logo from '../logo.svg';
 import '../App.css';
 
 import Header from './Header';
-const Weather = () => <h2>Weather Forecast</h2>
-
+import Weather from './Weather';
 
 class App extends Component {
-  componentMount(){
+  componentDidMount(){
     this.props.fetchUser();
   }
 
@@ -21,7 +20,7 @@ class App extends Component {
     <BrowserRouter>
     <div>
      <Header />
-      <Route exact={true} path="/" component={Weather}/>
+      <Route exact={true} path="/forecast" component={Weather}/>
     </div>
     </BrowserRouter>
       <header className="App-header">

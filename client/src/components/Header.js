@@ -1,14 +1,34 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class Header extends Component{
+  renderContent(){
+    switch (this.props.auth) {
+      case null:
+         return;
+      case false:
+         return (
+           <li><a href="/auth/google">Sign in Google</a></li>
+         );
+      default:
+        return (
+          <li><a href="/api/logout">Logout</a></li>
+        );
+    }
+  }
   render(){
+    //console.log(this.props);
     return (
       <nav>
-    <div class="nav-wrapper">
-      <a href="sass.html" className="brand-logo">Logo</a>
+    <div className="nav-wrapper">
+      <Link
+       to={ this.props.auth ? '/forecast' : '/'}
+       className="brand-logo"
+     >Logo
+     </Link>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li><a href="sass.html">Sign in Google</a></li>
+         {this.renderContent()}
       </ul>
     </div>
   </nav>
