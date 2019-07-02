@@ -17,7 +17,16 @@ ReactDOM.render(
   <Provider store={store}><App /></Provider>,
   document.getElementById('root'));
 
+
+  //https://api.apixu.com/v1/forecast.json?key=95d4c8915a8d4a0388665716193006&q=Paris
+
+console.log('RAPIDAPI WEATHER KEY IS', process.env.RAPIDAPI_WEATHER_KEY);
+console.log('Environment is', process.env.NODE_ENV);
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
+
+
+
 serviceWorker.unregister();

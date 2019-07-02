@@ -27,7 +27,7 @@ class Header extends Component{
        className="brand-logo"
      >Logo
      </Link>
-      <ul id="nav-mobile" className="right hide-on-med-and-down">
+      <ul className="right hide-on-med-and-down">
          {this.renderContent()}
       </ul>
     </div>

@@ -7,7 +7,7 @@ import logo from '../logo.svg';
 import '../App.css';
 
 import Header from './Header';
-import Weather from './Weather';
+import Forecasts from './Forecasts';
 
 class App extends Component {
   componentDidMount(){
@@ -20,7 +20,7 @@ class App extends Component {
     <BrowserRouter>
     <div>
      <Header />
-      <Route exact={true} path="/forecast" component={Weather}/>
+      <Route exact={true} path="/forecast" component={Forecasts}/>
     </div>
     </BrowserRouter>
       <header className="App-header">
