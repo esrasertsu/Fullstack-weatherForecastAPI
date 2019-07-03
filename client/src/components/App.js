@@ -3,8 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-import logo from '../logo.svg';
-import '../App.css';
+import './App.css';
 
 import Header from './Header';
 import Forecasts from './Forecasts';
@@ -23,13 +22,6 @@ class App extends Component {
       <Route exact={true} path="/forecast" component={Forecasts}/>
     </div>
     </BrowserRouter>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload!Esra
-        </p>
-        <a href="/auth/google">Sign in Google</a>
-      </header>
     </div>
   );
  }

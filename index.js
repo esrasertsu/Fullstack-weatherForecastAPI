@@ -30,9 +30,6 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 //require('./routes/weatherRoutes')(app);
 
-
-
-
     //   const url = "https://api.apixu.com/v1/forecast.json?key=95d4c8915a8d4a0388665716193006&q=Sydney&days=10";
     //   const getData = async url => {
     //   try {

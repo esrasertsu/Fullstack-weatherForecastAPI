@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ForecastDay extends React.Component {
+class ForecastDay extends Component {
   constructor(props) {
     super(props);
   }
@@ -9,7 +9,7 @@ class ForecastDay extends React.Component {
     const { day } = this.props;
     if (!day) return null;
     return (
-      <div className="forcastday-container">
+      <div className="forecastday-container">
         <div className="image">
           <img src={day.condition.icon} />
         </div>

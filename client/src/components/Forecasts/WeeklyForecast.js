@@ -9,11 +9,10 @@ export default class WeeklyForecast extends React.Component {
   }
 
   render() {
-    debugger;
     const { forecastdays } = this.props;
     return (
-      <div className="bottom-container">
-        <div className="inner-container">
+      <div className="bottom-container light-blue darken-3">
+        <div className="forecast-container">
           {forecastdays &&
             forecastdays.map((day, idx) => {
               return <ForecastDay day={day.day} key={idx} />;

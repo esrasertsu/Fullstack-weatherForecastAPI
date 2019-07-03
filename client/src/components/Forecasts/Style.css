@@ -1,0 +1,60 @@
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  margin-top:60px;
+  margin-bottom:60px
+}
+.inner-container{
+  width: 25%
+}
+
+.currentWeather-img{
+  width: 100px;
+  height: auto;
+}
+.location{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom:30px
+}
+.temp, .status{
+  font-size: 25px;
+}
+.forecast-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 201px;
+}
+.forecastday-container{
+  width:14.28%;
+  height: 100px;
+  margin:auto;
+}
+.logout{
+  font-size: 30px
+}
+@media (min-width:768px){
+  .info{
+    text-align: left
+  }
+  .inner-container.img{
+    text-align: right;
+  }
+
+}
+@media (max-width:767px){
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+  .inner-container{
+    width: 100%;
+    margin:10px
+  }
+}
