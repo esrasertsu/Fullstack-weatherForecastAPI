@@ -16,7 +16,7 @@ passport.deserializeUser((id, done)=>{
 });
 
 passport.use(
-  new GoogleStrategy({
+  new GoogleStrategy({   //it could be facebook, linkedinstrategy as well
     clientID: keys.googleClientID,
     clientSecret: keys.googleClientSecret,
     callbackURL:'/auth/google/callback',

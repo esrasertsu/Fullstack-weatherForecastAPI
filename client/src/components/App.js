@@ -8,6 +8,7 @@ import './App.css';
 import Header from './Header';
 import Forecasts from './Forecasts';
 
+
 class App extends Component {
   componentDidMount(){
     this.props.fetchUser();

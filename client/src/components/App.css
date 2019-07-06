@@ -16,6 +16,17 @@
 .App-link {
   color: #61dafb;
 }
+
+.select{
+
+  display: inline;
+  width: 300px;
+  border: 1px solid #949494;
+  margin-bottom:15px;
+}
+.selectCities{
+    height: 100px;
+}
 nav{
   background-color: #ddd;
 }

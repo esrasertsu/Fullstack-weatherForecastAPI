@@ -8,8 +8,10 @@ export default class CurrentForecast extends Component {
     this.state={};
   }
 
+
+
   render(){
-    const { location, temp_c, text, iconURL, humid, precip, wind} = this.props;
+    const { location, temp_c, lastUpdate, text, iconURL, humid, precip, wind} = this.props;
     return (
       <div className="container">
        <div className="location">{location}</div>
@@ -18,13 +20,14 @@ export default class CurrentForecast extends Component {
           <img className="currentWeather-img" src={iconURL} />
          </div>
           <div className="inner-container middle">
-            <div className="temp">{temp_c}°</div>
+            <div className="temp">{temp_c}°C</div>
             <div className="status">{text}</div>
           </div>
           <div className="inner-container">
             <div className="info">Humidity: {humid}%</div>
             <div className="info">Precipitation: {precip}%</div>
             <div className="info">Wind: {wind}km/h</div>
+            <div className="info lastUpdate">Last update: {lastUpdate}</div>
            </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ export default class WeeklyForecast extends React.Component {
         <div className="forecast-container">
           {forecastdays &&
             forecastdays.map((day, idx) => {
-              return <ForecastDay day={day.day} key={idx} />;
+              return <ForecastDay day={day.day} date={day.date} key={idx} />;
             })}
         </div>
       </div>

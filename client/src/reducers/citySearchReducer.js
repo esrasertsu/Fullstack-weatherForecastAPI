@@ -1,38 +1,10 @@
-import { EventEmitter } from "events";
-import React, {Component} from 'react';
+import { FETCH_CITY } from '../actions/types';
 
 export default function(state = null, action) {
   switch (action.type) {
+    case FETCH_CITY:
+      return action.payload || false;
     default:
-    return React.Children.map(this.props.children, child => {
-        return React.cloneElement(child, {
-          ...this.state,
-          eventEmitter: this.eventEmitter
-        });
-      });;
+    return state;
   }
 }
-
-
-//
-// export default class citySearchReducer extends React.Component {
-//   constructor(props) {
-//     super(props);
-//
-//     this.eventEmitter = new EventEmitter();
-//
-//     //Main App State
-//     this.state = {
-//       appName: "Weather Up"
-//     };
-//   }
-//
-//   render() {
-//     return React.Children.map(this.props.children, child => {
-//       return React.cloneElement(child, {
-//         ...this.state,
-//         eventEmitter: this.eventEmitter
-//       });
-//     });
-//   }
-// }

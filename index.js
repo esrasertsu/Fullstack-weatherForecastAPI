@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cookieSession = require('cookie-session');
-const passport = require('passport');
+const cookieSession = require('cookie-session'); // to enable cookies and make express use cookie
+const passport = require('passport');  // to use cookies
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 const fetch = require('node-fetch');
@@ -19,33 +19,15 @@ app.use(bodyParser.json());
 
 app.use(
   cookieSession({
-    maxAge : 30 * 24 * 60 * 60 * 1000,
+    maxAge : 100000,  //10*24*60*60*1000
     keys: [keys.cookieKey]
   })
 );
 
-app.use(passport.initialize());
-app.use(passport.session());
+ app.use(passport.initialize());
+  app.use(passport.session());
 
 require('./routes/authRoutes')(app);
-//require('./routes/weatherRoutes')(app);
-
-    //   const url = "https://api.apixu.com/v1/forecast.json?key=95d4c8915a8d4a0388665716193006&q=Sydney&days=10";
-    //   const getData = async url => {
-    //   try {
-    //     const response = await fetch(url);
-    //     const json = await response.json();
-    //     console.log(json);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // };
-    // getData(url);
-
-
-//app.get('/', (req,res)=> {
-//  res.send({bye:'buddy'});
-//})
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
