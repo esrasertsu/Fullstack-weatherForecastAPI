@@ -27,7 +27,7 @@ export default class CurrentForecast extends Component {
             <div className="info">Humidity: {humid}%</div>
             <div className="info">Precipitation: {precip}%</div>
             <div className="info">Wind: {wind}km/h</div>
-            <div className="info lastUpdate">Last update: {lastUpdate}</div>
+            <div className="info lastUpdate">Last update: {lastUpdate}  (Local Time)</div>
            </div>
         </div>
       </div>

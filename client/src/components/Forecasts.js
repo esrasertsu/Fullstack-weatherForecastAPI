@@ -28,7 +28,6 @@ class Forecasts extends Component {
 
  getWeather() {
       const { selectedCity, numForcastDays } = this.state;
-      debugger;
       const URL = `https://api.apixu.com/v1/forecast.json?key=${WEATHER_KEY}  &q=${selectedCity} &days=${numForcastDays}`;
       axios.get(URL)
       .then(res=> {
@@ -53,25 +52,10 @@ class Forecasts extends Component {
 
 
  componentDidMount() {
-debugger;
+
         this.hydrateStateWithLocalStorage();
 
-        // window.addEventListener(
-        //      "beforeunload",
-        //      this.saveStateToLocalStorage.bind(this)
-        //    );
-          // this.saveStateToLocalStorage();
-
    }
-   componentWillUnmount() {
-   //  window.removeEventListener(
-   //    "beforeunload",
-   //    this.saveStateToLocalStorage.bind(this)
-   //  );
-   //
-   // //saves if component has a chance to unmount
-   // this.saveStateToLocalStorage();
-  }
 
   refreshData(){
     if(this.state.selectedCity!=="" && localStorage.getItem(this.state.selectedCity)==null)
@@ -112,7 +96,7 @@ debugger;
   }
 
  handleChange(e){
-   debugger;
+
    this.setState({selectedCity: e.target.value,
                 validationError: e.target.value === "" ? "You must select your city" : ""},() => this.refreshData());
   }

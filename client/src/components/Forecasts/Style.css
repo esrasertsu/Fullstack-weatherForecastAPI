@@ -12,7 +12,7 @@
   margin-bottom:60px
 }
 .inner-container{
-  width: 25%
+  width: 31%
 }
 
 .currentWeather-img{
@@ -32,12 +32,12 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 201px;
+  height: 240px;
 }
 .forecastday-container{
   width:14.28%;
   height: 100px;
-  margin:auto;
+  margin:40px auto 0 auto;
 }
 .logout{
   font-size: 30px
